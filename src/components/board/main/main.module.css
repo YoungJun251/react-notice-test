@@ -1,0 +1,162 @@
+.container{
+    margin: 100px auto;
+    margin-top: 80px;
+    display: flex;
+    width:70%;
+    padding: 10px;
+    flex-direction: column;
+    
+}
+
+.list_item{
+    border-top: 2px solid #000;
+    width: 100%;
+}
+
+.list_item > div{
+    border-bottom: 1px solid #ddd;   
+}
+
+.list_item > div.list_top{
+    border-bottom: 1px solid #ddd;   
+}
+
+.list_item > div:last-child{
+    border-bottom: 1px solid #000;
+}
+
+
+
+.list_item > div > div{
+    display: inline-block;
+    text-align: center;
+}
+
+.list_item > div > div > div.menu{
+    display: flex;
+}
+
+.list_item .num{
+    width:15%;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.list_item > .list_top > div{
+    font-size: 18px;
+    font-weight:bold ;
+    
+}
+
+.list_item .title ,.menubar{
+    width: 70%;
+    text-align: left;
+}
+
+.list_item .list_top .title{
+    text-align: center;
+}
+
+
+.list_item .recommend{
+    width:15%;
+}
+
+.menu{
+    margin:10px;
+}
+
+.menu > .list_menu{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: coral;
+    font-size: 12px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    margin-right: 5px;
+}
+
+.menu > div > :nth-child(1){
+    display:block;
+    height: 20px;
+    font-weight: bold;
+}
+
+.menu > div > :nth-child(2){
+    display:inline-block;
+    height: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    opacity:0.5;
+}
+.menu > div > :nth-child(3){
+    display:inline-block;
+    margin-left: 3px;
+    height: 10px;
+    font-weight: bold;
+    font-size: 8px;
+    opacity: 0.3;
+    margin-right: 50px;
+}
+
+.recommend{
+    display:inline-block;
+    line-height: 40px;
+    justify-content: center;   
+}
+
+.board_page{
+    margin-top:30px;
+    text-align: center;
+    font-size: 0;
+}
+
+.board_page > a{
+    display: inline-block;
+    width:32px;
+    height: 32px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    line-height: 100%;
+    border: 1px solid #ddd;
+    border-left: 0px;
+    line-height: 100%;
+}
+
+.board_page > a.num, a.num_on{
+    padding-top: 9px;
+    font-size: 0.8rem;
+
+}
+
+.board_page > a.bt {
+    padding-top:10px;
+    font-size: 0.5rem;
+    align-items: center;
+}
+.board_page > a.bt:first-child{
+    border: 1px solid #ddd;
+}
+
+.search_bar{
+   display: inline-block;
+   text-align: right;
+   align-items: center;
+   width: 100%;
+   margin-top:10px;
+}
+
+
+.serach_id{
+    width: 30%;
+}
+
+.search_bar .search_btn{
+    width: 3%;
+    height: 22px;
+    box-sizing: border-box;
+    margin-left: 1px;
+}
+

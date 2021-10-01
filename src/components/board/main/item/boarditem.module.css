@@ -1,0 +1,135 @@
+.container{
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    text-align: center;
+}
+
+.container div{
+    display: inline-block;
+}
+
+.list_top{
+    width:100%;
+    border-top: 2px solid #000;
+    border-bottom: 1px solid #ddd;
+}
+
+.list_top div{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.0rem;
+    opacity: 1.0;
+}
+
+.top_recommend{
+    width:10%;
+}
+
+.num{
+    width:10%;
+    font-size:0.8rem;
+    font-weight: bold;
+}
+
+.board_title{
+    width:50%;
+}
+
+.board_id{
+    width:15%;
+    font-size:0.8rem;
+}
+
+
+.board_date{
+    width:10%;
+    font-size: 0.6em;
+    opacity: 0.3;
+}
+
+
+.list_item .recommend{
+    width:10%;
+    
+}
+
+.menu > .list_menu{
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: coral;
+    font-size: 12px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    margin-right: 5px;
+}
+
+
+.recommend{
+
+    line-height: 40px;  
+}
+
+.board_page{
+    margin-top:30px;
+    text-align: center;
+    font-size: 0;
+}
+
+.board_page > a{
+    display: inline-block;
+    width:32px;
+    height: 32px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    line-height: 100%;
+    border: 1px solid #ddd;
+    border-left: 0px;
+    line-height: 100%;
+}
+
+.board_page > a.num, a.num_on{
+    padding-top: 9px;
+    font-size: 0.8rem;
+
+}
+
+.board_page > a.bt {
+    padding-top:10px;
+    font-size: 0.5rem;
+    align-items: center;
+}
+
+.board_page > a.bt:first-child{
+    border: 1px solid #ddd;
+}
+
+.search_bar{
+   display: inline-block;
+   text-align: right;
+   align-items: center;
+   width: 100%;
+   margin-top:10px;
+}
+
+
+.serach_id{
+    width: 30%;
+}
+
+.search_bar .search_btn{
+    width: 3%;
+    height: 22px;
+    box-sizing: border-box;
+    margin-left: 1px;
+}
+
+.BoardItem:last-child{
+    border-bottom: 2px solid #000;
+}
+
+.list_main{
+    width: 100%;
+    border-bottom: 2px solid #000;
+}

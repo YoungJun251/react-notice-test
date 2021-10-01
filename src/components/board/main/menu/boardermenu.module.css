@@ -1,0 +1,49 @@
+.container{
+    display: flex;
+    width: 80%;   
+    padding: 20px;
+    height: 80px;
+    justify-content: space-between;
+    background-color: beige; 
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 80px;
+    
+}
+
+.container > div{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.menu_box{
+    width: 80px;
+    height: 35px;
+    border-radius:10px;
+    background-color: #ffe082;
+    font-size:12px;
+    padding:5px;
+    line-height:25px;
+    text-align:center;
+    font-weight: bold;
+    margin-right: 12px;
+}
+
+.btn_plus{
+    width: 40px;
+    height: 30px;
+    border-radius:10px;
+    background-color:white;    
+}
+
+.btn_write{
+    width: 80px;
+    height:30px;
+    font-size: 15px;
+    font-weight: bold;
+    border-bottom: #DBDBDB 1px solid;
+    background-color: #fafafa;
+    box-shadow: 0 4px 11px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
