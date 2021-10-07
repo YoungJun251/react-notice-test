@@ -4,7 +4,7 @@ import style from 'src/components/board/main/board_view.module.css';
 import axios from 'axios';
 import React, {useEffect,useState} from 'react';
 import * as faker from "faker";
-
+import BoardComment from "./comment/BoardComment";
 
 const Board_view = (): JSX.Element => {
 
@@ -41,7 +41,7 @@ const Board_view = (): JSX.Element => {
     return(
         <div className={style.container}>
             <div className={style.viewwrap}>
-                <div className={style.boardview}>
+                <div className={style.boardview} id= "view">
                     <div className={style.title}>
                         {users[0].title}
                     </div>
@@ -67,7 +67,7 @@ const Board_view = (): JSX.Element => {
                                 <dd>200</dd>
                             </dl>
                     </div>
-                    <div className={style.content}>
+                    <div className={style.content} >
                         <img className={style.board_img} src={faker.image.avatar()}/>    
                         <img className={style.board_img} src={faker.image.avatar()}/>    
                         <img className={style.board_img} src={faker.image.avatar()}/>    
@@ -78,6 +78,7 @@ const Board_view = (): JSX.Element => {
                         {users[3].body}
                         {users[4].body}
                     </div>
+                    <BoardComment/>
                 </div>
 
                 <div className={style.bt_wrap}>

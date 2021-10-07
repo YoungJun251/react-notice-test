@@ -8,6 +8,7 @@
 }
 
 
+
 .recommend{
     display:inline-block;
     line-height: 40px;
@@ -32,20 +33,43 @@
     line-height: 100%;
 }
 
-.board_page > a.num, a.num_on{
-    padding-top: 9px;
-    font-size: 0.8rem;
-
+.button_wrap{
+    text-align: right;
 }
 
-.board_page > a.bt {
+.write_button{
+    height:40px;
+    width:15%;
+    background-color: #8b00ff;
+    color: #ffd400;
+}
+
+
+.num{
+    padding-top: 9px;
+    font-size: 0.8rem;
+}
+.num_on{
+    padding-top: 9px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color:#8b00ff;
+}
+
+.board_page > a.btn {
     padding-top:10px;
     font-size: 0.5rem;
     align-items: center;
 }
-.board_page > a.bt:first-child{
+
+.board_page > a.btn:first-child{
     border: 1px solid #ddd;
 }
+
+.clicked_bt{
+
+}
+
 
 .search_bar{
    display: inline-block;
