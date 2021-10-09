@@ -46,26 +46,16 @@ const Board_view = (): JSX.Element => {
                         {users[0].title}
                     </div>
                     <div className={style.info}>
-                            <dl>
-                                <dt>No.</dt>
-                                <dd>{users[0].id}</dd>
-                            </dl>
-                            <dl>
-                                <dt>글쓴이</dt>
-                                <dd>박은비</dd>
-                            </dl>
-                            <dl>
-                                <dt>작성일</dt>
-                                <dd>2021.01.01</dd>
-                            </dl>
-                            <dl>
-                                <dt>조회수</dt>
-                                <dd>10</dd>
-                            </dl>
-                            <dl>
-                                <dt>추천</dt>
-                                <dd>200</dd>
-                            </dl>
+                        <div className={style.info_wrap}>
+                            <span className={style.header_box}>No</span>
+                            <span className={style.text_box}>1</span>
+                            <span className={style.header_box}>글쓴이</span>
+                            <span className={style.text_box}>리틀이용준</span>
+                            <span className={style.header_box}>게시일</span>
+                            <span className={style.text_box}>2021.12.1</span>
+                            <span className={style.header_box}>조회수</span>
+                            <span className={style.text_box}>10</span>
+                        </div>
                     </div>
                     <div className={style.content} >
                         <img className={style.board_img} src={faker.image.avatar()}/>    

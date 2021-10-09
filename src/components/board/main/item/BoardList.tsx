@@ -3,95 +3,69 @@ import React, {useEffect,useState} from 'react';
 import axios from 'axios';
 import BoardItem from 'src/components/board/main/item/Boarditem';
 
-export interface item{
-    board_no:number,
-    board_menu: string,
-    board_id: string,
-    board_like: number,
-    board_commnet: number;
-    board_title: string;
-    board_date:Date;
+export interface IItem{
+    boardNo:number,
+    boardMenu: string,
+    boardId: string,
+    boardLike: number,
+    boardComment: number;
+    boardTitle: string;
+    boardDate:Date;
 }
 
 
-let itemlist: item[] =[
+let itemList: IItem[] =[
     {
-        board_no:1,
-        board_menu: "거래",
-        board_id: "리틀박은비",
-        board_like: 12,
-        board_commnet: 10,
-        board_title: "오늘 골프치기 딱! 좋은 날씨네요",
-        board_date: new Date(2021,1,1)
+        boardNo:1,
+        boardMenu: "거래",
+        boardId: "리틀박은비",
+        boardLike: 12,
+        boardComment: 10,
+        boardTitle: "오늘 골프치기 딱! 좋은 날씨네요",
+        boardDate: new Date(2021,1,1)
     },
     {
-        board_no:2,
-        board_menu: "거래",
-        board_id: "리틀박은비",
-        board_like: 12,
-        board_commnet: 10,
-        board_title: "오늘 골프치기 딱! 좋은 날씨네요",
-        board_date: new Date(2021,1,1)
+        boardNo:2,
+        boardMenu: "거래",
+        boardId: "리틀박은비",
+        boardLike: 12,
+        boardComment: 10,
+        boardTitle: "오늘 골프치기 딱! 좋은 날씨네요",
+        boardDate: new Date(2021,1,1)
     },
     {
-        board_no:3,
-        board_menu: "거래",
-        board_id: "리틀박은비",
-        board_like: 12,
-        board_commnet: 10,
-        board_title: "오늘 골프치기 딱! 좋은 날씨네요",
-        board_date: new Date(2021,1,1)
+        boardNo:1,
+        boardMenu: "거래",
+        boardId: "리틀박은비",
+        boardLike: 12,
+        boardComment: 10,
+        boardTitle: "오늘 골프치기 딱! 좋은 날씨네요",
+        boardDate: new Date(2021,1,1)
     },
     {
-        board_no:4,
-        board_menu: "TIP",
-        board_id: "리틀이용준",
-        board_like: 122,
-        board_commnet: 100,
-        board_title: "야무지게 골프치러 나왔어요 오늘 보기 잡았습니다.",
-        board_date: new Date(2021,1,1)
-    },{
-        board_no:5,
-        board_menu: "자유",
-        board_id: "리틀박은비",
-        board_like: 12,
-        board_commnet: 10,
-        board_title: "오늘 골프치기 딱! 좋은 날씨네요",
-        board_date: new Date(2021,1,1)
+        boardNo:1,
+        boardMenu: "거래",
+        boardId: "리틀박은비",
+        boardLike: 12,
+        boardComment: 10,
+        boardTitle: "오늘 골프치기 딱! 좋은 날씨네요",
+        boardDate: new Date(2021,1,1)
     },
     {
-        board_no:6,
-        board_menu: "자유",
-        board_id: "리틀박은비",
-        board_like: 12,
-        board_commnet: 10,
-        board_title: "오늘 골프치기 딱! 좋은 날씨네요",
-        board_date: new Date(2021,1,1)
-    },
-    {
-        board_no:7,
-        board_menu: "자유",
-        board_id: "리틀박은비",
-        board_like: 12,
-        board_commnet: 10,
-        board_title: "오늘 골프치기 딱! 좋은 날씨네요",
-        board_date: new Date(2021,1,1)
-    },
-    {
-        board_no:8,
-        board_menu: "자유",
-        board_id: "리틀박은비",
-        board_like: 12,
-        board_commnet: 10,
-        board_title: "오늘 골프치기 딱! 좋은 날씨네요",
-        board_date: new Date(2021,1,1)
-    },
+        boardNo:1,
+        boardMenu: "거래",
+        boardId: "리틀박은비",
+        boardLike: 12,
+        boardComment: 10,
+        boardTitle: "오늘 골프치기 딱! 좋은 날씨네요",
+        boardDate: new Date(2021,1,1)
+    }
 
 
 
 ]
 
-const Boarditem = () : JSX.Element => {
+const BoardList = () : JSX.Element => {
 
 
     const [users, setUsers] = useState(null);
@@ -129,13 +103,12 @@ const Boarditem = () : JSX.Element => {
                     <div className={style.board_id}>글쓴이</div>
                     <div className={style.board_date}>작성일</div>
                     <div className={style.recommend}>추천</div>
-                    
                 </div>
 
                 <div className={style.list_main}>
-                    {itemlist.map((item) => {
+                    {itemList.map((item) => {
                         return(
-                            <BoardItem key={item.board_no} item={item}/> 
+                            <BoardItem key={item.boardNo} item={item}/>
                         )
                     })}
                 </div>
@@ -144,4 +117,4 @@ const Boarditem = () : JSX.Element => {
         </div>
     )
 }
-export default Boarditem;
+export default BoardList;

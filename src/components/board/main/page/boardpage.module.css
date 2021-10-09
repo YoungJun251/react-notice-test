@@ -35,13 +35,18 @@
 
 .button_wrap{
     text-align: right;
+    position:fixed;
+    right:100px;
+    bottom:20px;
+    text-align: right;
 }
 
 .write_button{
-    height:40px;
-    width:15%;
+    height:50px;
+    min-width:50px;
+    border-radius: 50%;
     background-color: #8b00ff;
-    color: #ffd400;
+    color: #fff;
 }
 
 
@@ -56,42 +61,83 @@
     color:#8b00ff;
 }
 
-.board_page > a.btn {
+.btn {
     padding-top:10px;
     font-size: 0.5rem;
     align-items: center;
 }
 
-.board_page > a.btn:first-child{
+.btn:first-child{
     border: 1px solid #ddd;
 }
 
-.clicked_bt{
-
-}
-
-
 .search_bar{
-   display: inline-block;
-   text-align: right;
-   align-items: center;
+   display: flex;
+   justify-content: center;
    width: 100%;
    margin-top:10px;
+    vertical-align: top;
+
 }
 
-
-.serach_id{
-    width: 30%;
+.select_component{
+    background-color: #fff;
+    border-radius: 5%;
+    border : 1px solid #000;
+    height:34px;
+    text-align: left;
+    padding:2px 4px;
+    margin-right:1px;
+    opacity: 0.8;
 }
 
-.search_bar .search_btn{
+.select_text:after{
+    content: "▽";
+    margin-left:55px;
+    height: 15px;
+}
+
+.search_id{
+    width: 20%;
+    height: 34px;
+    border : 1px solid #000;
+}
+
+.saerch_id::placeholder{
+    color:#000;
+}
+
+.search_btn{
     width: 5%;
-    height: 22px;
+    height: 36px;
     box-sizing: border-box;
     margin-left: 1px;
+    background-color: #8b00ff;
+    color:#fff;
+}
+.select_menu_wrap{
+    border : 1px solid #000;
+    width:97%;
 }
 
-.list_item div:last-child{
-    border-bottom: 2px solid #000;
+.select_hidden{
+    display: none;
+}
+.select_menu{
+    width:90%;
+    height:34px;
+    padding: 2px 4px;
+    cursor:pointer;
+    background-color: #fff;
+}
+
+.select_wrap{
+    display: inline-block;
+    width:12%;
+    height: 100%;
+}
+
+.option{
+
 }
 

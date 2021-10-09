@@ -1,23 +1,29 @@
 import style from 'src/components/board/main/item/boarditem.module.css';
 import React, {useEffect,useState} from 'react';
+import {IItem} from "./BoardList";
+import FavoriteIcon from '@material-ui/icons//Favorite';
 
 
+interface IItemProps{
+    item : IItem;
+}
 
-const Boarditem = ({item}: any) : JSX.Element => {
+
+const Boarditem = ({item}: IItemProps) : JSX.Element => {
     
         return(
                 <div className={style.container}>
-                    <div className={style.num}>{item.board_no}</div>
+                    <div className={style.num}>{item.boardNo}</div>
                     
                     <div className={style.board_title}>
-                        <a  href="board/write"> {item.board_title}</a>
+                        <span className={style.board_title_text}>{item.boardTitle.length > 30 ? item.boardTitle.slice(0,30): item.boardTitle}</span>
                     </div>
-                    <div className={style.board_id}> {item.board_id}</div>
-                    <div className={style.board_date}>{item.board_date.toDateString()}</div>
+                    <div className={style.board_id}> {item.boardId}</div>
+                    <div className={style.board_date}>{item.boardDate.toDateString()}</div>
                             
                     <div className={style.recommend}>
-                        <span>❤ </span>
-                        <span>{item.board_like}</span>
+                        <span>❣️</span>
+                        <span>{item.boardLike}</span>
                     </div>
                 </div>        
     )

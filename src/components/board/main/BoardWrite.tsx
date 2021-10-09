@@ -9,6 +9,7 @@ enum Etype {
     TIP = "TIP게시판"
 }
 
+let typeLength = Object.keys(Etype).length;
 const BoardWrite = (): JSX.Element => {
 
     const [imgBase64, setImgBase64] = useState(""); 
@@ -16,6 +17,8 @@ const BoardWrite = (): JSX.Element => {
 
     const [showType, setShowType] = useState(false);
     const [headText, setHeadText] = useState("말머리 선택");
+
+    const [checkedItem, setCheckedItem] = useState(new Boolean(typeLength));
 
     const typeClick = () =>  {
         setShowType(!showType);
@@ -25,7 +28,18 @@ const BoardWrite = (): JSX.Element => {
          setHeadText(type);
     }
 
-    const handlermenuClick = (type : Etype) => {
+    const setFalse = () => {
+
+
+    }
+
+    const itemClick = (type : Etype) => {
+
+    }
+    const handlerChecked = (id : number, click: boolean) => {
+
+    }
+    const handlerMenuClick = (type : Etype) => {
         menuClick(type);
         setShowType(!showType);
     }
@@ -56,33 +70,25 @@ const BoardWrite = (): JSX.Element => {
             <div className={style.writewrap}>
                 <div className={style.board_write}>
                     <div className={style.title}>
-                        <textarea placeholder="제목을 입력해 주세요."></textarea>
+                        <textarea className={style.titleTextArea} placeholder="제목을 입력해 주세요."></textarea>
                         <div className={style.select_button}>
                              <button className={style.head} onClick={handlerClick}>{headText}</button>
                              <span>-</span>
-                            <div className={showType ? style.select_option : style.disabled}>
-                                <ul>
-                                    <li aria-selected="true" className={style.typelist}>
-                                        <button onClick={() => handlermenuClick(Etype.SELL)} className={style.option}>{Etype.SELL}</button>
-                                    </li>
-                                    <li className={style.typelist}>
-                                        <button onClick={() => handlermenuClick(Etype.TIP)} className={style.option}>{Etype.TIP}</button>
-                                    </li>
-                                    <li className={style.typelist}>
-                                        <button onClick={() => handlermenuClick(Etype.FREE)} className={style.option}>{Etype.FREE}</button>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
-
-                            
+                    </div>
+                    <div className={style.menu_wrap}>
+                        <input type="checkbox" id="FREE" name="FREE"/>
+                        <label htmlFor="FREE">자유게시판</label>
+                        <input type="checkbox" id="SALE" name="SALE"/>
+                        <label htmlFor="FREE">거래게시판</label>
+                        <input type="checkbox" id="TIP" name="TIP"/>
+                        <label htmlFor="FREE">TIP게시판</label>
                     </div>
                     <div className={style.info}>
                         <dl>
                             <dt>글쓴이</dt>
                             <dd><span className={style.id}>리틀박은비</span></dd>
                         </dl>
-                    
                     </div>
                     <div className={style.content_wrap}>
                         <div className={style.content}>
@@ -101,7 +107,6 @@ const BoardWrite = (): JSX.Element => {
                             </div>
                         </div>
                     </div>
-                    
                 </div>
                 
                 

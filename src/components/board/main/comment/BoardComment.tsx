@@ -22,11 +22,7 @@ const BoardComment = () => {
                             <span className={style.total_count}>215</span>
                             <span>개</span>
                         </div>
-                        <div className={style.comment_right}>
-                            <Link href="#view">본문보기</Link>
-                            <Link href="/board/write">새로고침</Link>
-                            <Link href="#view">댓글닫기</Link>
-                        </div>
+
                 </div>
                 <div className={style.comment_box}>
                     <ul className={style.comment_list}>

@@ -8,7 +8,7 @@
     height: 100px;;
 }
 
-.container > .viewwrap{
+.viewwrap{
     border-top: 2px solid #000;
     width: 100%;
 }
@@ -16,59 +16,41 @@
 .boardview{
     width:100%;
     border-top: 2px solid #ddd;
-    
 }
 
-.boardview .title{
+.title{
     padding: 20px 15px;
     border-bottom: 1px dashed #ddd;
     font-size: 1.4rem;
 }
 
-.boardview .info{
+.info{
     padding: 15px;
     border-bottom: 1px solid #999;
-    font-size:0px;
-    
+    position: relative;
 }
 
-.boardview .info dl{
-    position: relative; 
-    display: inline-block;
-    padding: 0 20px;
+.text_box{
+    margin-left :10px;
+    font-size:1.0rem;
+    opacity:0.8;
 }
 
-.boardview .info dl:first-child{
-    padding-left:0;
+.header_box{
+    margin-left:10px;
+    font-weight: bold;
 }
 
-.boardview .info dl:before{ /* 가상선 생성*/
-    content:"";
+.text_box:after{ /* 가상선 생성*/
+    margin-left:10px;
+    content:"|";
     width:1px;
     height: 13px;
-    background:#ddd;
-    display: block ;
-    position: absolute;
-    top:1px;
-    left:0;
-}
-.boardview .info dl:first-child:before{ /* 첫 info 요소의 가상선은 보여지지 않도록*/
-    display:none;
-}
-.boardview .info dl dt,
-.boardview .info dl dd{
-    display: inline-block;
-    font-size:0.9rem;
-}
-
-.boardview .info dl dd{
-    margin-left:10px;
-    color:#777;
+    color:#ddd;
 }
 
 
-
-.boardview .content{
+.content{
     padding: 15px;
     line-height:150%;
     border-bottom: 2px solid #000;
@@ -85,6 +67,7 @@
 .board_img:last-child{
     margin-bottom:10px;
 }
+
 .view_top{
     border-bottom: 1px solid #000;
 }
@@ -97,7 +80,6 @@
 }
 
 .bt_wrap a{
-    display: inline-block;
     min-width: 80px;
     padding:10px;
     border: 1px solid #000;
@@ -106,7 +88,7 @@
     margin-left:10px;
 }
 
-.bt_wrap a.on{
+.on{
     background-color: #8b00ff;
     color:#fff44f;
 }
