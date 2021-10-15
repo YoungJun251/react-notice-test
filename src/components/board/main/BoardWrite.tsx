@@ -112,7 +112,7 @@ const BoardWrite = (): JSX.Element => {
                 
                 <div className={style.bt_wrap}>
                     <a href="#" className={style.on}>등록</a>
-                    <a href="#">취소</a>
+                    <a href="/board">취소</a>
                 </div>
             </div>
         </div> 

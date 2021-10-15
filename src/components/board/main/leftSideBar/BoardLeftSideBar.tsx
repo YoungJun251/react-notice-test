@@ -28,7 +28,7 @@ const BoardLeftSideBar = (): JSX.Element => {
 
     return(
         <div className={style.container}>
-            <span onMouseOver={handlerMouseOver}>↓</span>
+            <span onMouseOver={handlerMouseOver} className={style.menu_wrap}>menu</span>
             <div className={getList ? style.box_wrap : style.box_wrap_hidden}>
                 <div className={selectMenu === "FREE" ? style.board_menu_clicked : style.board_menu_default } onClick={() => {menuClicked("FREE")}}>자유게시판</div>
                 <div className={selectMenu === "TIP" ? style.board_menu_clicked : style.board_menu_default } onClick={() => {menuClicked("TIP")}}>TIP게시판</div>

@@ -81,6 +81,8 @@
 }
 
 .select_component{
+    display: flex;
+    justify-content: space-between;
     background-color: #fff;
     border-radius: 5%;
     border : 1px solid #000;
@@ -89,13 +91,11 @@
     padding:2px 4px;
     margin-right:1px;
     opacity: 0.8;
+    width:95%;
+    align-items: center;
 }
 
-.select_text:after{
-    content: "▽";
-    margin-left:55px;
-    height: 15px;
-}
+
 
 .search_id{
     width: 20%;
@@ -137,7 +137,20 @@
     height: 100%;
 }
 
-.option{
-
+.select_button{
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
 }
 
+.arrow_icon{
+    width: 12px;
+    height: 12px;
+}
+
+.arrow_icon_open{
+    width: 12px;
+    height: 12px;
+    transform: rotate(180deg);
+}
